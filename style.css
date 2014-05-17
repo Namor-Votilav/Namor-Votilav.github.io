@@ -35,28 +35,12 @@ body{
 
 	color: #ef4036;
 	background: #fff;
+	box-shadow: -5px 5px 0px rgba(0,0,0,.2);
 
 	z-index: 2;
 
 	font-family: Clear-Bold;
 	line-height: 80%;
-}
-.card-shadow{
-	position: fixed;
-	display: block;
-	width: 370px;
-	height: 195px;
-
-	left:50%;
-	top:50%;
-	margin-left: -205px;
-	margin-top: -107.5px;
-	padding: 30px;
-
-	z-index: 1;
-
-	background: #71767B;
-	opacity: .3;
 }
 .card span{
 	display: block;
@@ -78,26 +62,26 @@ body{
 .slide p{
 	font-size: 1.2em;
 }
-.slide:nth-child(3){
+.slide:nth-child(2){
 	/*title*/
 	background: #fbaf3f;
 }
-.slide:nth-child(4){
+.slide:nth-child(3){
 	/*interface designer*/
 	background: #652c90;
 }
-.slide:nth-child(5){
+.slide:nth-child(4){
 	/*recruits*/
 	background: #652c90;
 	background-image: url(img/pat.png);
 }
-.slide:nth-child(6){
+.slide:nth-child(5){
 	/*projection mapping*/
 	background-image: url(img/0-27.gif);
 	background-size: 100%;
 	background-position: -20%;
 }
-.slide:nth-child(7){
+.slide:nth-child(6){
 	background: #fbaf3f;
 }
 #piclinks{
