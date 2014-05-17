@@ -72,8 +72,8 @@ body{
 }
 .slide:nth-child(4){
 	/*recruits*/
-	background: #652c90;
-	background-image: url(img/pat.png);
+	background: #367ca3;
+	/*background-image: url(img/pat.png);*/
 }
 .slide:nth-child(5){
 	/*projection mapping*/
