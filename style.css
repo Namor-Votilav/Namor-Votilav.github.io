@@ -58,6 +58,10 @@ body{
 	background: #71767B;
 	opacity: .3;
 }
+.card span{
+	display: block;
+	margin-top: 40%;
+}
 .slide{
 	width: 100%;
 	height: 20%;
@@ -75,16 +79,20 @@ body{
 	font-size: 1.2em;
 }
 .slide:nth-child(3){
+	/*title*/
 	background: #fbaf3f;
 }
 .slide:nth-child(4){
-	background-image: url(img/pat.png);
-}
-.slide:nth-child(5){
+	/*interface designer*/
 	background: #652c90;
 }
+.slide:nth-child(5){
+	/*recruits*/
+	background: #652c90;
+	background-image: url(img/pat.png);
+}
 .slide:nth-child(6){
-	/*background: #08090a;*/
+	/*projection mapping*/
 	background-image: url(img/0-27.gif);
 	background-size: 100%;
 	background-position: -20%;

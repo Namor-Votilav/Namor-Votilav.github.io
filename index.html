@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html>
-<title>Namor Votilav</title>
-<link rel="stylesheet" href="style.css">
+<head>
+	<title>Namor Votilav</title>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" href="style.css">
+
+	<script>
+  $(document).ready(function(){
+  	var str = parseInt($(".slide").css("height"));
+  	var halfstr = parseInt(str)/2;
+    $(window).scroll(function () {
+    	// alert(str);
+    	if ($(document).scrollTop()>=0){
+      		$(".card p").text('namor@troevkube.ru');
+  		}
+    	if ($(document).scrollTop()>=halfstr){
+      		$(".card p").text('interface designer');
+  		}
+  		if ($(document).scrollTop()>=halfstr+str){
+      		$(".card p").text('digital tutor');
+  		}
+  		if ($(document).scrollTop()>=str*2+halfstr){
+      		$(".card p").text('projection mapping designer');
+  		}
+  		if ($(document).scrollTop()>=str*3+halfstr){
+      		$(".card p").text("").append('<a href="mailto:namor@troevkube.ru?subject=So I stumbled across your portfoio...">drop me a line</a>');
+  		}
+    });
+
+  });
+  </script>
+</head>
 <body>
 <div id="wrapper">
 	<div class="card-shadow"></div>
 	<div class="card">
-		<h1>Namor Votilav</h1>
-		<p>namor@troevkube.ru</p>
+		<span>
+			<h1>Namor Votilav</h1>
+			<p>namor@troevkube.ru</p>
+		</span>
 	</div>
 	<div class="slide">
 		<div id="piclinks">
