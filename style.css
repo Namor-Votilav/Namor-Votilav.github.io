@@ -55,8 +55,8 @@ body{
 
 	z-index: 1;
 
-	background: #5A5E61;
-	opacity: .1;
+	background: #71767B;
+	opacity: .3;
 }
 .slide{
 	width: 100%;
@@ -78,13 +78,16 @@ body{
 	background: #fbaf3f;
 }
 .slide:nth-child(4){
-	background: #367ca3;
+	background-image: url(img/pat.png);
 }
 .slide:nth-child(5){
 	background: #652c90;
 }
 .slide:nth-child(6){
-	background: #08090a;
+	/*background: #08090a;*/
+	background-image: url(img/0-27.gif);
+	background-size: 100%;
+	background-position: -20%;
 }
 .slide:nth-child(7){
 	background: #fbaf3f;
