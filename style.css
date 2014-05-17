@@ -1,0 +1,15 @@
+body{
+	margin:0;
+	padding:0;
+}
+#wrapper{
+	width:100%;
+	height:100%;
+	display:block;
+}
+.middler{
+	width: 100%;
+	height: 50%;
+	display: block;
+	background: #ff0;
+}
