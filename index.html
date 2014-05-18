@@ -16,7 +16,7 @@
 	  	$(window).scroll(function () {
 	    	// alert(str);
 	    	if ($(document).scrollTop()>=0){
-	      		$(".card p").text('namor@troevkube.ru');
+	      		$(".card p").text("").append('<a href="mailto:namor@troevkube.ru?subject=I want to hire you, pal.">namor@troevkube.ru</a>');
 	  		}
 	    	if ($(document).scrollTop()>=halfstr){
 	      		$(".card p").text('interface designer');
@@ -28,7 +28,7 @@
 	      		$(".card p").text('projection mapping designer');
 	  		}
 	  		if ($(document).scrollTop()>=str*3+halfstr){
-	      		$(".card p").text("").append('<a href="mailto:namor@troevkube.ru?subject=So I stumbled across your portfoio...">drop me a line</a>');
+	      		$(".card p").text("").append('<a href="mailto:namor@troevkube.ru?subject=I definitely want to hire you, pal.">drop me a line</a>');
 	  		}
 	    });
 
@@ -68,7 +68,7 @@
 	<div class="card">
 		<span>
 			<h1>Namor Votilav</h1>
-			<p>namor@troevkube.ru</p>
+			<p><a href="mailto:namor@troevkube.ru?subject=I want to hire you, pal.">namor@troevkube.ru</a></p>
 		</span>
 	</div>
 	<div class="slide">
@@ -131,7 +131,7 @@
 				</svg>
 			</div>
 			<div id="eatout_search">
-				<input type="search">
+				<input type="search" disabled="true">
 				<svg name="search" width="425px" height="50px">
 					<g>
 						<path fill="#6D91CB" d="M31.75,30.476c0-0.683-0.251-1.236-0.752-1.664c-0.501-0.426-1.131-0.815-1.888-1.168
