@@ -159,6 +159,13 @@ body{
 	top: 0;
 	left: 0;
 }
+#BN_helpme{
+	position: absolute;
+	width: 315px;
+	height: 48px;
+	left: 930px;
+	top: 265px;
+}
 
 /*HELPERS*/
 
