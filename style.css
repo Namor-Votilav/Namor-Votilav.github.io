@@ -46,6 +46,9 @@ body{
 	display: block;
 	margin-top: 40%;
 }
+
+/*SLIDES*/
+
 .slide{
 	width: 100%;
 	height: 20%;
@@ -72,7 +75,7 @@ body{
 }
 .slide:nth-child(4){
 	/*recruits*/
-	background: #367ca3;
+	background: #3d6db2;
 	/*background-image: url(img/pat.png);*/
 }
 .slide:nth-child(5){
@@ -87,7 +90,40 @@ body{
 #piclinks{
 	padding-top: 50px;
 }
+.bgsvg{
+	position: absolute;
+	height: 20%;
+	left:0;
+}
 
+/*INTERFACE*/
+
+#int_buttons{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+
+	/*box-shadow: -20px 20px 0px rgba(0,0,0,.1);*/
+}
+#eatout_next{
+	width: 170px;
+	height: 45px;
+	display: block;
+	text-align: left;
+	background: #6d90ca;
+	box-shadow: 0px 5px 0px #4d68b1 !important; 
+
+	margin-left: 315px;
+	margin-top: 60px;
+}
+#eatout_next svg{
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+
+/*HELPERS*/
 
 .divider{
 	display: block;

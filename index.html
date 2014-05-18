@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<title>Namor Votilav</title>
@@ -8,6 +8,9 @@
 	<script>
   $(document).ready(function(){
   	var str = parseInt($(".slide").css("height"));
+  	$( window ).resize(function() {
+	  	str = parseInt($(".slide").css("height"));
+	});
   	var halfstr = parseInt(str)/2;
     $(window).scroll(function () {
     	// alert(str);
@@ -52,24 +55,65 @@
 	</div>
 	<div class="slide">
 		<!-- interface -->
-		<svg width="100%" height="100%">
+		<svg class="bgsvg" width="100%" height="100%">
 			<line x1="0" y1="200" x2="200" y2="0" stroke="white" stroke-width=".25" stroke-dasharray="10,5" />
 			<line x1="0" y1="700" x2="700" y2="0" stroke="white" stroke-width=".25" stroke-dasharray="10,5" />
 			<line x1="0" y1="1200" x2="1200" y2="0" stroke="white" stroke-width=".25" stroke-dasharray="10,5" />
 			<line x1="0" y1="1700" x2="1700" y2="0" stroke="white" stroke-width=".25" stroke-dasharray="10,5" />
 			<line x1="0" y1="2200" x2="2200" y2="0" stroke="white" stroke-width=".25" stroke-dasharray="10,5" />
 		</svg>
+		<div id="int_buttons">
+			<div id="eatout_next">
+				<svg name="next+fork" x="0px" y="0px" width="170px" height="45px">
+						<g>
+							<path fill="#FFFAFA" d="M29.949,20.109l-1.32-2.64h-0.12l0.384,2.64v8.76h-3.119v-16.92h2.399l6.36,8.952l1.271,2.568h0.12
+								l-0.384-2.568v-8.832h3.12v16.92h-2.4L29.949,20.109z"/>
+							<path fill="#FFFAFA" d="M51.068,27.837c-0.479,0.385-1.132,0.708-1.956,0.973c-0.824,0.264-1.7,0.396-2.628,0.396
+								c-1.936,0-3.352-0.563-4.248-1.691c-0.896-1.128-1.344-2.677-1.344-4.645c0-2.111,0.504-3.695,1.512-4.752
+								c1.008-1.056,2.424-1.584,4.248-1.584c0.608,0,1.2,0.08,1.776,0.24s1.088,0.424,1.536,0.792c0.447,0.368,0.808,0.864,1.08,1.488
+								c0.271,0.624,0.407,1.4,0.407,2.328c0,0.336-0.02,0.695-0.06,1.079c-0.04,0.385-0.1,0.784-0.18,1.2h-7.177
+								c0.048,1.008,0.308,1.769,0.777,2.28c0.471,0.513,1.232,0.768,2.284,0.768c0.654,0,1.24-0.1,1.759-0.3
+								c0.518-0.199,0.912-0.403,1.184-0.611L51.068,27.837z M46.615,19.029c-0.813,0-1.413,0.244-1.803,0.732s-0.624,1.14-0.704,1.956
+								h4.44c0.063-0.864-0.067-1.528-0.394-1.992C47.828,19.262,47.315,19.029,46.615,19.029z"/>
+							<path fill="#FFFAFA" d="M55.869,22.726l-3.6-5.856h3.72l1.56,2.568l0.672,1.68l0.721-1.68l1.632-2.568h3.384l-3.624,5.76
+								l3.864,6.24h-3.624l-1.849-2.88l-0.72-1.775l-0.768,1.775l-1.849,2.88h-3.407L55.869,22.726z"/>
+							<path fill="#FFFAFA" d="M64.509,16.869h1.656v-2.256l3.12-0.888v3.144h2.928v2.641h-2.928v4.607c0,0.832,0.084,1.428,0.252,1.788
+								s0.483,0.54,0.947,0.54c0.32,0,0.596-0.032,0.828-0.096c0.231-0.064,0.492-0.16,0.78-0.288l0.552,2.399
+								c-0.432,0.209-0.936,0.385-1.512,0.528c-0.576,0.145-1.16,0.216-1.752,0.216c-1.104,0-1.916-0.284-2.437-0.852
+								c-0.52-0.568-0.779-1.5-0.779-2.796V19.51h-1.656V16.869z"/>
+						</g>
+						<g>
+							<line fill="none" stroke="#FFFAFA" stroke-width="3" stroke-miterlimit="10" x1="120.667" y1="22.5" x2="148.666" y2="22.5"/>
+							<path fill="none" stroke="#FFFAFA" stroke-width="3" stroke-miterlimit="10" d="M148.666,16.5h-6.543
+								c-3.281,0-5.94,2.659-5.94,5.94v0.12c0,3.281,2.659,5.94,5.94,5.94h6.543"/>
+						</g>
+				</svg>
+			</div>
+			<input id="eatout_search" type="search">
+			<div id="BN_datetime">
+				<h2>Specify the time</h2>
+				<p>Date: <input type="date"></p>
+				<p>Time: <input type="time"></p>
+				<p><sub>*leave the fields empty if unsure</sub></p>
+			</div>
+			<div id="BN_helpme"><span></span>Help me, Sherlock!</div>
+			
+		</div>
 	</div>
 	<div class="slide">
 		<!-- recruits -->
-		<svg width="100%" height="100%">
+		<svg class="bgsvg" width="100%" height="100%">
 			<defs> 
+				<pattern id="minorGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+      				<path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.1"/>
+   				</pattern>
 	      		<pattern id="grid20" width="20" height="20" patternUnits="userSpaceOnUse">
 	         		<path d="M 100 0 L 0 0 0 100" fill="none" stroke="white" stroke-width=".25"/>
 	      		</pattern>
 	   		</defs>
-		   	<rect fill="#367ca3" height="100%" width="100%" y="0"></rect>
+		   	<rect fill="#3d6db2" height="100%" width="100%" y="0"></rect>
 		   	<rect fill="url(#grid20)" height="100%" width="100%" y="0"></rect>
+		   	<rect fill="url(#minorGrid)" height="100%" width="100%" y="0"></rect>
 		</svg>
 	</div>
 	<div class="slide">
