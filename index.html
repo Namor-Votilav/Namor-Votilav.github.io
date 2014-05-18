@@ -5,14 +5,15 @@
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<link rel="stylesheet" href="style.css">
 
-	<script>
-	  $(document).ready(function(){
-	  	var str = parseInt($(".slide").css("height"));
+	<script name="main">
+	  	$(document).ready(function(){
+	  	var str = parseInt($(".slide").height());
+
 	  	$( window ).resize(function() {
-		  	str = parseInt($(".slide").css("height"));
+		  	str = parseInt($(".slide").height());
 		});
-	  	var halfstr = parseInt(str)/2;
-	    $(window).scroll(function () {
+	  	var halfstr = str/2;
+	  	$(window).scroll(function () {
 	    	// alert(str);
 	    	if ($(document).scrollTop()>=0){
 	      		$(".card p").text('namor@troevkube.ru');
@@ -31,8 +32,36 @@
 	  		}
 	    });
 
+	  	// second slide drop shadow
+	  	$(document).mousemove(function(event) {
+	  		var deltaX = event.pageX - parseInt($(".slide").width())/2;
+	  		var deltaY = event.pageY - str - halfstr;
+	  		deltaX = -deltaX/16+"px";
+	  		deltaY = -deltaY/8+"px";
+	  		$("#shadows").children().css({
+	  			'box-shadow' : deltaX +' ' + deltaY + ' 0px rgba(0,0,0,.2)',
+	  		});
+	  	});
+
 	  });
  	</script>
+ 	<script name="svg scroll">
+		var initpos = 0;
+		
+		$(document).scroll(function(event){
+			var curpos = $(this).scrollTop();
+				if (curpos>initpos){
+					$("#scr").animate({left: "-=3"}, 0);
+					initpos = curpos-1;
+				}
+				else
+				{
+					$("#scr").animate({left: "+=3"}, 0);
+					initpos = curpos+1;
+				}
+			}
+		);
+		</script>
 </head>
 <body>
 <div id="wrapper">
@@ -66,23 +95,13 @@
 			<line x1="0" y1="3700" x2="3700" y2="0" stroke="white" stroke-width=".25" stroke-dasharray="10,5" />
 			<line x1="0" y1="4200" x2="4200" y2="0" stroke="white" stroke-width=".25" stroke-dasharray="10,5" />
 		</svg>
-		<script>
-		var initpos = 0;
-		
-		$(document).scroll(function(event){
-			var curpos = $(this).scrollTop();
-				if (curpos>initpos){
-					$("#scr").animate({left: "-=3"}, 0);
-					initpos = curpos-1;
-				}
-				else
-				{
-					$("#scr").animate({left: "+=3"}, 0);
-					initpos = curpos+1;
-				}
-			}
-		);
-		</script>
+			<div id="shadows">
+				<div id="sh1"></div>
+				<div id="sh2"></div>
+				<div id="sh3"></div>
+				<div id="sh4"></div>
+			</div>
+
 			<div id="eatout_next">
 				<svg name="next+fork" x="0px" y="0px" width="170px" height="45px">
 						<g>
