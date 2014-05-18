@@ -166,6 +166,46 @@ body{
 	left: 930px;
 	top: 265px;
 }
+#eatout_cancel{
+	position: absolute;
+	width: 170px;
+	height: 45px;
+	display: block;
+	text-align: left;
+	background: #f79e7b;
+	box-shadow: 0px 5px 0px #f47d52 !important; 
+
+	left: 255px;
+	top: 515px;
+}
+#eatout_cancel svg{
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+#eatout_sugg{
+	position: absolute;
+	width: 270px;
+	height: 50px;
+	display: block;
+	text-align: left;
+	background: #92278F;
+
+	left: 625px;
+	top: 565px;
+}
+#eatout_sugg svg{
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+#eatout_sugg span{
+	position: relative;
+	width: 220px;
+	font-size: 16pt;
+	top: -35px;
+	left: 60px;
+}
 
 /*SHADOWS*/
 #shadows{
@@ -206,6 +246,22 @@ body{
 	
 	left: 930px;
 	top: 265px;
+}
+#sh5{
+	position: absolute;
+	width: 170px;
+	height: 45px;
+
+	left: 255px;
+	top: 515px;
+}
+#sh6{
+	position: absolute;
+	width: 270px;
+	height: 50px;
+
+	left: 625px;
+	top: 565px;
 }
 
 /*HELPERS*/
