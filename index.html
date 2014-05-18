@@ -6,33 +6,33 @@
 	<link rel="stylesheet" href="style.css">
 
 	<script>
-  $(document).ready(function(){
-  	var str = parseInt($(".slide").css("height"));
-  	$( window ).resize(function() {
-	  	str = parseInt($(".slide").css("height"));
-	});
-  	var halfstr = parseInt(str)/2;
-    $(window).scroll(function () {
-    	// alert(str);
-    	if ($(document).scrollTop()>=0){
-      		$(".card p").text('namor@troevkube.ru');
-  		}
-    	if ($(document).scrollTop()>=halfstr){
-      		$(".card p").text('interface designer');
-  		}
-  		if ($(document).scrollTop()>=halfstr+str){
-      		$(".card p").text('digital tutor');
-  		}
-  		if ($(document).scrollTop()>=str*2+halfstr){
-      		$(".card p").text('projection mapping designer');
-  		}
-  		if ($(document).scrollTop()>=str*3+halfstr){
-      		$(".card p").text("").append('<a href="mailto:namor@troevkube.ru?subject=So I stumbled across your portfoio...">drop me a line</a>');
-  		}
-    });
+	  $(document).ready(function(){
+	  	var str = parseInt($(".slide").css("height"));
+	  	$( window ).resize(function() {
+		  	str = parseInt($(".slide").css("height"));
+		});
+	  	var halfstr = parseInt(str)/2;
+	    $(window).scroll(function () {
+	    	// alert(str);
+	    	if ($(document).scrollTop()>=0){
+	      		$(".card p").text('namor@troevkube.ru');
+	  		}
+	    	if ($(document).scrollTop()>=halfstr){
+	      		$(".card p").text('interface designer');
+	  		}
+	  		if ($(document).scrollTop()>=halfstr+str){
+	      		$(".card p").text('digital tutor');
+	  		}
+	  		if ($(document).scrollTop()>=str*2+halfstr){
+	      		$(".card p").text('projection mapping designer');
+	  		}
+	  		if ($(document).scrollTop()>=str*3+halfstr){
+	      		$(".card p").text("").append('<a href="mailto:namor@troevkube.ru?subject=So I stumbled across your portfoio...">drop me a line</a>');
+	  		}
+	    });
 
-  });
-  </script>
+	  });
+ 	</script>
 </head>
 <body>
 <div id="wrapper">
@@ -55,13 +55,34 @@
 	</div>
 	<div class="slide">
 		<!-- interface -->
-		<svg class="bgsvg" width="100%" height="100%">
+		<svg class="bgsvg" id="scr" width="500%" height="100%" vart="200">
 			<line x1="0" y1="200" x2="200" y2="0" stroke="white" stroke-width=".25" stroke-dasharray="10,5" />
 			<line x1="0" y1="700" x2="700" y2="0" stroke="white" stroke-width=".25" stroke-dasharray="10,5" />
 			<line x1="0" y1="1200" x2="1200" y2="0" stroke="white" stroke-width=".25" stroke-dasharray="10,5" />
 			<line x1="0" y1="1700" x2="1700" y2="0" stroke="white" stroke-width=".25" stroke-dasharray="10,5" />
 			<line x1="0" y1="2200" x2="2200" y2="0" stroke="white" stroke-width=".25" stroke-dasharray="10,5" />
+			<line x1="0" y1="2700" x2="2700" y2="0" stroke="white" stroke-width=".25" stroke-dasharray="10,5" />
+			<line x1="0" y1="3200" x2="3200" y2="0" stroke="white" stroke-width=".25" stroke-dasharray="10,5" />
+			<line x1="0" y1="3700" x2="3700" y2="0" stroke="white" stroke-width=".25" stroke-dasharray="10,5" />
+			<line x1="0" y1="4200" x2="4200" y2="0" stroke="white" stroke-width=".25" stroke-dasharray="10,5" />
 		</svg>
+		<script>
+		var initpos = 0;
+		
+		$(document).scroll(function(event){
+			var curpos = $(this).scrollTop();
+				if (curpos>initpos){
+					$("#scr").animate({left: "-=3"}, 0);
+					initpos = curpos-1;
+				}
+				else
+				{
+					$("#scr").animate({left: "+=3"}, 0);
+					initpos = curpos+1;
+				}
+			}
+		);
+		</script>
 			<div id="eatout_next">
 				<svg name="next+fork" x="0px" y="0px" width="170px" height="45px">
 						<g>
