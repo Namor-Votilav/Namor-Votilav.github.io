@@ -116,6 +116,45 @@ body{
 	left: 0px;
 	top: 0px;
 }
+#eatout_search{
+	position: absolute;
+	left: 795px;
+	top: 85px;
+}
+#eatout_search input{
+	height: 48px;
+	width: 423px;
+	border: 2px dotted #4d68b1;
+	box-shadow: 0px 10px 0px #4d68b1 !important;
+}
+#eatout_search svg{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+#BN_datetime{
+	position: absolute;
+	width: 310px;
+	height: 175px;
+	text-align: left;
+	left: 60px;
+	top: 185px;
+
+	background: #636AB1;
+}
+#BN_datetime span{
+	position: absolute;
+	margin: 0px 0px 10px 50px;
+}
+#BN_datetime h2{
+	position: relative;
+	margin-left: 20px;
+}
+#BN_datetime svg{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 
 /*HELPERS*/
 
