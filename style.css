@@ -91,6 +91,16 @@ a:link{
 	background: #3d6db2;
 	/*background-image: url(img/pat.png);*/
 }
+.slide:nth-child(4) svg{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.slide:nth-child(4) img{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
 .slide:nth-child(5){
 	/*projection mapping*/
 	background-image: url(img/0-27.gif);
@@ -233,6 +243,8 @@ a:link{
 
 	left: 315px;
 	top: 60px;
+
+	background: rgba(0,0,0,.2);
 }
 #sh2{
 	position: absolute;
@@ -241,6 +253,8 @@ a:link{
 
 	left: 795px;
 	top: 85px;
+
+	background: rgba(0,0,0,.2);
 }
 #sh3{
 	position: absolute;
@@ -249,6 +263,8 @@ a:link{
 	
 	left: 60px;
 	top: 185px;
+
+	background: rgba(0,0,0,.2);
 }
 #sh4{
 	position: absolute;
@@ -257,6 +273,8 @@ a:link{
 	
 	left: 930px;
 	top: 265px;
+
+	background: rgba(0,0,0,.2);
 }
 #sh5{
 	position: absolute;
@@ -265,6 +283,8 @@ a:link{
 
 	left: 255px;
 	top: 515px;
+
+	background: rgba(0,0,0,.2);
 }
 #sh6{
 	position: absolute;
@@ -273,6 +293,8 @@ a:link{
 
 	left: 625px;
 	top: 565px;
+
+	background: rgba(0,0,0,.2);
 }
 
 /*HELPERS*/
