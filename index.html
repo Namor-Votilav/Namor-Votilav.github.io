@@ -23,9 +23,18 @@
 	  	function changeTitle(){
 	    	if ($(document).scrollTop()>=0){
 	      		$(".card p").text("").append('<a href="mailto:namor@troevkube.ru?subject=I want to hire you, pal.">namor@troevkube.ru</a>');
+	      		$(".slide:nth-child(3)").children('div').css({
+	      			"transform": "scale(0.9)"
+	      		}
+	    		);
 	  		}
 	    	if ($(document).scrollTop()>=halfstr){
 	      		$(".card p").text('interface designer');
+
+	      		$(".slide:nth-child(3)").children('div').css({
+	      			"transform": "scale(1)"
+	      		}
+	      		);
 	  		}
 	  		if ($(document).scrollTop()>=halfstr+str){
 	      		$(".card p").text('digital tutor');
@@ -43,9 +52,14 @@
 	  		var deltaX = event.pageX - parseInt($(".slide").width())/2;
 	  		var deltaY = event.pageY - str - halfstr;
 	  		deltaX = -deltaX/16+"px";
-	  		deltaY = -deltaY/12+"px";
-	  		$("#shadows").children().css({
-	  			'box-shadow' : deltaX +' ' + deltaY + ' 0px rgba(0,0,0,.2)',
+	  		deltaY = -deltaY/8+"px";
+
+	  		var shch = $("#shadows").children()
+		  	shch.each(function(index) {
+		  		$(this).css({
+		  			marginLeft: deltaX,
+		  			marginTop: deltaY
+		  			});
 	  			});
 		  	});
 		  });
@@ -55,7 +69,6 @@
 		// third slide logo reveal
 		function thirdReveal(){
 			scrpos = ($(document).scrollTop()-parseInt($(".slide").height())*1.3);
-			// console.log(scrpos);
 
 			$("#svg-mask").css({
 				height : scrpos
@@ -91,9 +104,9 @@
 	<div class="slide">
 	<!-- title -->
 		<div id="piclinks">
-			<a href="http://behance.net/Namor"><img src="img/Be.png"></a>
-			<a href="http://troevkube.ru"><img src="img/trvk.png"></a>
-			<a href="http://vk.com/namor.everyday"><img src="img/ezh.png"></a>
+			<a href="http://behance.net/Namor"><img src="img/Be.png" alt="my portfolio on Behance"></a>
+			<a href="http://troevkube.ru"><img src="img/trvk.png" alt="my team"></a>
+			<a href="http://vk.com/namor.everyday"><img src="img/ezh.png" alt="my everydays"></a>
 		</div>
 		<span class="divider"></span>
 		<h2>Who is that?</h2>
