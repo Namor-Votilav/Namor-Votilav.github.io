@@ -13,8 +13,14 @@
 		  	str = parseInt($(".slide").height());
 		});
 	  	var halfstr = str/2;
-	  	$(window).scroll(function () {
-	    	// alert(str);
+
+	  	$(document).scroll(function(event) {
+	  		changeTitle();
+			thirdReveal();
+			slideHor();
+		});
+
+	  	function changeTitle(){
 	    	if ($(document).scrollTop()>=0){
 	      		$(".card p").text("").append('<a href="mailto:namor@troevkube.ru?subject=I want to hire you, pal.">namor@troevkube.ru</a>');
 	  		}
@@ -30,7 +36,7 @@
 	  		if ($(document).scrollTop()>=str*3+halfstr){
 	      		$(".card p").text("").append('<a href="mailto:namor@troevkube.ru?subject=I definitely want to hire you, pal.">drop me a line</a>');
 	  		}
-	    });
+	    }
 
 	  	// second slide drop shadow
 	  	$(document).mousemove(function(event) {
@@ -43,19 +49,24 @@
 	  			});
 		  	});
 		  });
+		
+		var initpos = 0;
 
 		// third slide logo reveal
-		$(window).scroll(function(event) {
-			$("#svg-mask").css({
-				height : ($(document).scrollTop()-parseInt($(".slide").height())*1.4),
-			});
-		});
-	 	</script>
+		function thirdReveal(){
+			scrpos = ($(document).scrollTop()-parseInt($(".slide").height())*1.3);
+			// console.log(scrpos);
 
-	 	<script name="svg scroll">
-			var initpos = 0;
+			$("#svg-mask").css({
+				height : scrpos
+			});
+			$("#avsvg").css({
+				opacity : scrpos/200
+			});
+		}
+
 		// second slide hor svg scroll
-		$(document).scroll(function(event){
+		function slideHor(){
 			var curpos = $(this).scrollTop();
 				if (curpos>initpos){
 					$("#scr").animate({left: "-=3"}, 0);
@@ -67,7 +78,6 @@
 					initpos = curpos+1;
 				}
 			}
-		);
 		</script>
 </head>
 <body>
@@ -383,7 +393,7 @@
 		   	<rect fill="url(#minorGrid)" height="100%" width="100%" y="0"></rect>
 		</svg>
 		<!-- avsvg -->
-		<svg name="av" width="100%" height="100%">
+		<svg id="avsvg" width="100%" height="100%">
 			<g>
 				<g>
 					<line fill="none" stroke="#FFFFFF" stroke-width="0.5" stroke-miterlimit="10" x1="0" y1="99.533" x2="2.5" y2="99.533"/>
