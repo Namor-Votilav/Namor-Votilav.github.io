@@ -56,6 +56,8 @@ body{
 
 	font-family: Clear-Bold;
 	line-height: 80%;
+
+	transition: margin-left .5s ease .1s;
 }
 .card span{
 	display: block;
@@ -119,6 +121,23 @@ a:link{
 	left: 0;
 	top: 0;
 }
+#about_mapping{
+	position: absolute;
+	display: block;
+	width: 300px;
+	right: 50px;
+	bottom: 50px;
+
+	text-align: right;
+	line-height: 135%;
+}
+#about_mapping h1{
+	font-size: 32pt;
+}
+#about_mapping a{
+	color: #fff;
+	font-size: 14pt;
+}
 .slide:nth-child(5){
 	/*projection mapping*/
 	background-image: url(img/0-27.gif);
@@ -127,6 +146,19 @@ a:link{
 }
 .slide:nth-child(6){
 	background: #fbaf3f;
+}
+#about{
+	position: absolute;
+	right: 0;
+	top: 37.5%;
+	width: 50%;
+	height: 30%;
+
+	text-align: left;
+	line-height: 135%;
+}
+.slide:nth-child(6) #about p{
+	width: 500px
 }
 #piclinks{
 	padding-top: 50px;

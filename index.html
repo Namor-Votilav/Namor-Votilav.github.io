@@ -22,7 +22,7 @@
 
 	  	function changeTitle(){
 	    	if ($(document).scrollTop()>=0){
-	      		$(".card p").text("").append('<a href="mailto:namor@troevkube.ru?subject=I want to hire you, pal.">namor@troevkube.ru</a>');
+	      		$(".card p").text("").append('<a href="mailto:namor@troevkube.ru?subject=I want to work with you, pal.">namor@troevkube.ru</a>');
 	      		$(".slide:nth-child(3)").children('div').css({
 	      			"transform": "scale(0.9)",
 	      			"-webkit-transform": "scale(0.9)"
@@ -44,11 +44,17 @@
 	      		$("#me").css({
 					opacity: 0
 				});
+				$(".card").css({
+					marginLeft: -200
+				});
 	  		}
 	  		if ($(document).scrollTop()>=str*3+halfstr){
-	      		$(".card p").text("").append('<a href="mailto:namor@troevkube.ru?subject=I definitely want to hire you, pal.">drop me a line</a>');
+	      		$(".card p").text("designer");
 	      		$("#me").css({
 					opacity: 1
+				});
+				$(".card").css({
+					marginLeft: -550
 				});
 	  		}
 	    }
@@ -605,12 +611,24 @@
 				<img src="img/recr.png">
 			</foreignObject>
 		</svg>
+		<div id="about_mapping">
+			<h1>Live courses</h1>
+			<p>on 3D graphics, video compositing and projection mapping.</p>
+			<a href="http://vk.com/avolution_recruits">learn more</a>
+		</div>
 	</div>
 	<div class="slide">
 		<!-- mapping -->
-
 	</div>
-	<div class="slide"></div>
+	<div class="slide">
+		<div id="about">
+			<h1>That's me.</h1>
+			<p>I'm a designer based in Chelyabinsk, Russia.</p>
+			<p>I love grids. I'm inspired by solid structures, ambient music and creative people. 
+				I do all kinds of stuff and am willing to keep learning.</p>
+			<p>Wanna work together? <a href="mailto:namor@troevkube.ru?subject=I definitely want to work with you, pal.">Drop me a line</a></p>
+		</div>
+	</div>
 </div>
 </body>
 </html>
