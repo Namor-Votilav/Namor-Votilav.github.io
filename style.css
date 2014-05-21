@@ -34,7 +34,7 @@ body{
 
 	font-family: Clear;
 	background: #FFFF77;
-	color: ##3F4037;
+	color: #3F4037;
 }
 .card{
 	position: fixed;
@@ -57,7 +57,7 @@ body{
 	font-family: Clear-Bold;
 	line-height: 80%;
 
-	transition: margin-left .5s ease .1s;
+	transition: margin-left 500ms 200ms cubic-bezier(0.310, 0.020, 0.010, 1.110); 
 }
 .card span{
 	display: block;
