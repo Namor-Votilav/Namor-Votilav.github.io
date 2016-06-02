@@ -9,9 +9,22 @@
     *{
       font-family: 'Open Sans', Arial;
     }
-    div{
-      margin: 50px 50px;
+    #main{
       display: block;
+    }
+    #main div{
+      display: inline-block;
+      background: #F2F2F2;
+      padding: 15px 50px 20px;
+      border-radius: 10px;
+      margin: 50px 50px;
+    }
+    #main div a{
+      font-size: 32px;
+    }
+    .linkblock{
+      margin: 25px 50px;
+      display: inline-block;
     }
     a{
       font-size: 48pt;
@@ -25,29 +38,44 @@
     }
     p{
       font-size: 14pt;
-      margin-bottom: -10px;
+      margin-bottom: -5px;
+      color: #4F4F4F;
     }
-    #main{
-      background: #F2F2F2;
-      width: 300px;
-      padding: 15px 50px 20px;
-      border-radius: 10px;
-    }
-    #main a{
-      font-size: 32px;
+    .wrap{
+      display: block;
     }
   </style>
 <body>
   <div id="main">
-    <a href="https://namor-votilav.github.io/ae.zip">Проектные файлы</a>
+    <div>
+      <a href="https://namor-votilav.github.io/ae.zip">Скачать файлы прототипа</a>
+    </div>
+  </div>
+  <div class="linkblock">
+    <p>Программа на сайте Adobe</p>
+    <a href="https://www.adobe.com/products/aftereffects.html?promoid=KLXLW" target="blank">Adobe After Effects</a>  
+  </div>
+  <div class="wrap">
+    <div class="linkblock">
+      <p>Пиратская ссылка (Win)</p>
+      <a href="https://rutracker.org/forum/viewtopic.php?t=5205539" target="blank">Yarrrrr</a>  
+    </div>
+    <div class="linkblock">
+      <p>Пиратская ссылка (Mac)</p>
+      <a href="https://rutracker.org/forum/viewtopic.php?t=5205539" target="blank">Yarrrrr</a>  
+    </div>
   </div>
   <div>
-    <p>Программа для сжатия видео</p>
-    <a href="https://handbrake.fr">HandBrake</a>
+    <div class="linkblock">
+      <p>Программа для сжатия видео</p>
+      <a href="https://handbrake.fr" target="blank">HandBrake</a>
+    </div>
   </div>
   <div>
-    <p>Онлайн gif-конвертер</p>
-    <a href="https://ezgif.com">EZ Gif</a>
+    <div class="linkblock">
+      <p>Онлайн gif-конвертер</p>
+      <a href="https://ezgif.com" target="blank">EZ Gif</a>
+    </div>
   </div>
 </body>
 </html>
